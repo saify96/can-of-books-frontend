@@ -6,6 +6,7 @@ import MyFavoriteBooks from './myFavoriteBooks'
 import Login from './Login'
 import Profile from './Profile'
 import { withAuth0 } from "@auth0/auth0-react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,
