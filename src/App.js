@@ -3,7 +3,8 @@ import Header from './Header';
 import IsLoadingAndError from './IsLoadingAndError';
 import Footer from './Footer';
 import MyFavoriteBooks from './myFavoriteBooks'
-import Login from './login'
+import Login from './Login'
+import Profile from './Profile'
 import { withAuth0 } from "@auth0/auth0-react";
 import {
   BrowserRouter as Router,
@@ -12,7 +13,6 @@ import {
 } from "react-router-dom";
 
 class App extends React.Component {
-
   render() {
     console.log('app', this.props)
     console.log(this.props)
@@ -20,7 +20,7 @@ class App extends React.Component {
     return(
       <>
         <Router>
-          <IsLoadingAndError>
+          {/* <IsLoadingAndError> */}
             <Header />
               <Switch>
                 <Route exact path="/">
@@ -31,15 +31,14 @@ class App extends React.Component {
                 </Route>
                 {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
                 <Route exact path="/profile">
-                  <Login/>
+                  <Profile/>
                 </Route>
               </Switch>
             <Footer />
-          </IsLoadingAndError>
+          {/* </IsLoadingAndError> */}
         </Router>
       </>
     )
   }
 }
-
 export default withAuth0(App);
