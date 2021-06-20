@@ -31,7 +31,6 @@ class App extends React.Component {
                 </Route>
                 {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
                 <Route exact path="/profile">
-                  {/* TODO: if the user is logged in, render the `MyFavoriteBooks` component, if they are not, render the `Login` component */}
                   <Login/>
                 </Route>
               </Switch>
