@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
 import { Link } from "react-router-dom";
 import './header.css';
 import Logout from "./Logout"
@@ -11,18 +13,23 @@ class Header extends React.Component {
   render() {
     const { isAuthenticated } = this.props.auth0;
     return (
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand>My Favorite Books</Navbar.Brand>
-        <Link to="/">Home</Link>
-        <Link to="/profile">Profile</Link>
-        {/* TODO: if the user is logged in, render the `LogoutButton` - if the user is logged out, render the `LoginButton` */}
-        {
-          isAuthenticated ?
-            <Logout />
-            :
-            <LoginButton />
-        }
-      </Navbar>
+      <>
+        <Navbar bg="primary" variant="dark">
+          <Container>
+            <Navbar.Brand>My Favorite Books</Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link ><Link to="/">Home</Link></Nav.Link>
+              <Nav.Link><Link to="/profile">Profile</Link></Nav.Link>
+              <Nav.Link>{
+                isAuthenticated ?
+                  <Logout />
+                  :
+                  <LoginButton />
+              }</Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
+      </>
     )
   }
 }
