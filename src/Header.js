@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
 import './header.css';
 import Logout from "./Logout"
-import Login from "./Login"
+import LoginButton from "./LoginButton"
 import { withAuth0 } from "@auth0/auth0-react";
 
 class Header extends React.Component {
@@ -20,7 +20,7 @@ class Header extends React.Component {
           isAuthenticated ?
             <Logout />
             :
-            <Login />
+            <LoginButton />
         }
       </Navbar>
     )
