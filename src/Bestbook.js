@@ -14,11 +14,11 @@ export class Bestbook extends Component {
     }
     componentDidMount = async () => {
         await axios.get(`${serverUrl}/books?email=${this.state.userEmail}`).then(response => {
-            console.log(response)
+            // console.log(response)
             this.setState({
-                booksData: response.data[0].books,
+                booksData: response.data[response.data.length-1].books,
             })
-        }).catch(error => console.log(error))
+        }).catch(error => alert(error))
     }
     render() {
         return (
