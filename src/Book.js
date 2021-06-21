@@ -1,19 +1,28 @@
 import React, { Component } from 'react'
+import Card from 'react-bootstrap/Card'
+
 
 export class Book extends Component {
     render() {
         return (
             <div>
                 <>
-                    <h2> My Books</h2>
                     {this.props.booksData.length &&
-                     this.props.booksData.map((book, idx) => (
-                        <div key={idx}>
-                            {book.name}
-                            {book.description}
-                            {book.status}
-                        </div>
-                    ))}
+                        this.props.booksData.map((book, idx) => (
+                            <>
+                                <Card  key={idx}>
+                                    <Card.Body>
+                                        <Card.Title><h2>{book.name}</h2></Card.Title>
+                                        <Card.Text>
+                                            {book.description}
+                                        </Card.Text>
+                                        <Card.Text>
+                                            {book.status}
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </>
+                        ))}
                 </>
             </div>
         )
