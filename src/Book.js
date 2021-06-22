@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Card from 'react-bootstrap/Card'
 
-
 export class Book extends Component {
     render() {
         return (
@@ -29,5 +28,4 @@ export class Book extends Component {
         )
     }
 }
-
 export default Book

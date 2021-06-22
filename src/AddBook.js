@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-
 export class AddBook extends Component {
     constructor(props) {
         super(props)
@@ -11,7 +10,6 @@ export class AddBook extends Component {
             addedBookName: '',
             addedBookDesc: '',
             addedBookStatus: ''
-
         }
     }
     showAddBookFormFunc = () => {
@@ -41,7 +39,6 @@ export class AddBook extends Component {
             showAddBookForm: false
         })
     }
-
     render() {
         return (
             <>
@@ -59,16 +56,12 @@ export class AddBook extends Component {
                             <Form.Control type="text" placeholder="Enter Book Description" onChange={this.getBookDesc} />
                             <Form.Label>Book Status</Form.Label>
                             <Form.Control type="text" placeholder="Enter Book Status" onChange={this.getBookStatus} />
-
                         </Form.Group>
                         <input value="ADD" type='submit' />
-
                     </Form>
                 }
-
             </>
         )
     }
 }
-
 export default AddBook
