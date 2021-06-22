@@ -20,6 +20,7 @@ export class Book extends Component {
                                             {book.status}
                                         </Card.Text>
                                     </Card.Body>
+                                    <button onClick={e => this.props.deleteMyBook(idx)} >Delete Book</button>
                                 </Card>
                             </>
                         ))}
