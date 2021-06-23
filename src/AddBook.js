@@ -51,7 +51,7 @@ export class AddBook extends Component {
                         <Form.Group>
                             <h3>ADD BOOk: </h3>
                             <Form.Label>Book Name</Form.Label>
-                            <Form.Control type="text" placeholder="Enter Book Name" onChange={this.getBookName} />
+                            <Form.Control type="text" placeholder="Enter Book Name" onChange={this.getBookName} required/>
                             <Form.Label>Book Description</Form.Label>
                             <Form.Control type="text" placeholder="Enter Book Description" onChange={this.getBookDesc} />
                             <Form.Label>Book Status</Form.Label>
